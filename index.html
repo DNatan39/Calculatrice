@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <title>Calculatrice</title>
+</head>
+
+<body class="bg-dark d-flex justify-content-center align-items-center flex-column">
+    <div id="title" class="position-absolute"><h1>&#127884;I Love Japan&#127884;</h1></div>
+    <div id="backgroundsakura">
+        <img src="assets/img/Branche de sakura.png" alt="Branche de Sakura">
+    </div>
+    <div id="backgroundsakura2">
+        <img src="assets/img/Branche de sakura inversée.png" alt="Branche de Sakura">
+    </div>
+    <section id="parent" class="container d-flex justify-content-center align-items-center flex-column">
+        <div id="main" class="container-fluid d-flex justify-content-center align-items-center flex-column bgfirst">
+            <div id="resultat" class="bgsecond mb-2">
+                <div id="output" class="text-end w-100 bgsecond">0</div>
+            </div>
+            <div id="first-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="button" class="supp mx-1 p-3 px-5">AC</button>
+                <button type="button" class="supp mx-1 py-3 px-4">DEL</button>
+                <button type="button" class="opperateur mx-1 p-3 px-4">/</button>
+            </div>
+            <div id="second-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="button" class="caractere mx-1 p-3 px-4">7</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">8</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">9</button>
+                <button type="button" class="opperateur mx-1 p-3 px-4">*</button>
+            </div>
+            <div id="third-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="button" class="caractere mx-1 p-3 px-4">4</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">5</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">6</button>
+                <button type="button" class="opperateur mx-1 p-3 px-4">-</button>
+            </div>
+            <div id="fourth-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="button" class="caractere mx-1 p-3 px-4">1</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">2</button>
+                <button type="button" class="caractere mx-1 p-3 px-4">3</button>
+                <button type="button" class="opperateur mx-1 p-3 px-4">+</button>
+            </div>
+            <div id="fifth-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button type="button" class="caractere mx-1 p-3 px-5">0</button>
+                <button type="button" class="opperateur mx-1 p-3 px-4 py-3">.</button>
+                <button type="button" class="egal mx-1 p-3 px-4">=</button>
+            </div>
+        </div>
+    </section>
+    <!-- <section id="parent" class="container d-flex justify-content-center align-items-center flex-column">
+        <div id="main" class="container-fluid d-flex justify-content-center align-items-center flex-column bgfirst">
+            <div id="resultat" class="bgsecond mb-2">
+                <input id="output" class="p-4 text-end w-100 bgsecond"></input>
+            </div>
+            <div id="first-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button id="r1-1" class="mx-1 p-3 px-5" onclick="effacer()">C</button>
+                <button id="r1-3" class="mx-1 py-3 px-4" onclick="deleteLastNumber()">DEL</button>
+                <button id="r1-4" class="mx-1 p-3 px-4" onclick="afficher('/')">/</button>
+            </div>
+            <div id="second-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button id="r2-1" class="mx-1 p-3 px-4" onclick="afficher('7')">7</button>
+                <button id="r2-2" class="mx-1 p-3 px-4" onclick="afficher('8')">8</button>
+                <button id="r2-3" class="mx-1 p-3 px-4" onclick="afficher('9')">9</button>
+                <button id="r2-4" class="mx-1 p-3 px-4" onclick="afficher('*')">*</button>
+            </div>
+            <div id="third-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button id="r3-1" class="mx-1 p-3 px-4" onclick="afficher('4')">4</button>
+                <button id="r3-2" class="mx-1 p-3 px-4" onclick="afficher('5')">5</button>
+                <button id="r3-3" class="mx-1 p-3 px-4" onclick="afficher('6')">6</button>
+                <button id="r3-4" class="mx-1 p-3 px-4" onclick="afficher('-')">-</button>
+            </div>
+            <div id="fourth-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button id="r4-1" class="mx-1 p-3 px-4" onclick="afficher('1')">1</button>
+                <button id="r4-2" class="mx-1 p-3 px-4" onclick="afficher('2')">2</button>
+                <button id="r4-3" class="mx-1 p-3 px-4" onclick="afficher('3')">3</button>
+                <button id="r4-4" class="mx-1 p-3 px-4" onclick="afficher('+')">+</button>
+            </div>
+            <div id="fifth-row" class="p-2 w-100 d-flex justify-content-center align-items-center">
+                <button id="r5-1" class="mx-1 p-3 px-5" onclick="afficher('0')">0</button>
+                <button id="r5-2" class="mx-1 py-3" onclick="afficher('.')">.</button>
+                <button id="r5-3" class="mx-1 p-3 px-4" onclick="calculer('=')">=</button>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <script src="assets/js/app.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
